@@ -1,0 +1,21 @@
+{
+  "name": "pace-safety",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "latest",
+    "body-parser": "latest",
+    "postmark": "latest",
+    "twilio": "latest"
+  }
+}
