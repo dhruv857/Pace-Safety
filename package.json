@@ -19,6 +19,7 @@
     "express": "latest",
     "body-parser": "latest",
     "postmark": "latest",
-    "twilio": "latest"
+    "twilio": "latest",
+    "mongodb":"latest"
   }
 }
