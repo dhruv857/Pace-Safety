@@ -20,6 +20,7 @@
     "body-parser": "latest",
     "postmark": "latest",
     "twilio": "latest",
-    "mongodb":"latest"
+    "mongodb":"latest",
+    "merge-descriptors":"latest"
   }
 }
