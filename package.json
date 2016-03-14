@@ -14,5 +14,12 @@
     "url": ""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "latest",
+    "body-parser": "latest",
+    "postmark": "latest",
+    "twilio": "latest",
+    "mongodb":"latest"
+  }
 }
