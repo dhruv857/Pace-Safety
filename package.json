@@ -21,6 +21,7 @@
     "postmark": "latest",
     "twilio": "latest",
     "mongodb":"latest",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "bluebird":"latest"
   }
 }
