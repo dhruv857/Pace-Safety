@@ -13,3 +13,6 @@ div
         each val in document
           tr
             td= val._id
+            each report in val.report
+              td= report.metadata.type
+              td= report.data.name
