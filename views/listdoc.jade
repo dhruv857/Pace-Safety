@@ -13,6 +13,11 @@ div
         each val in document
           tr
             td= val._id
+
             each report in val.report
-              td= report.metadata.type
-              td= report.data.name
+              each meta in report.metadata
+                td= meta.type
+              each data in report.data
+                td= data.name
+                td= data.userEmail
+                td= data.date
