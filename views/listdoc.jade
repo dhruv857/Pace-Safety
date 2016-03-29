@@ -19,7 +19,15 @@ div
             td= val._id
 
             each vaa in val.report
-                if vaa.type
-                  td= vaa.type
-                if vaa.name
-                  td= vaa.name
+              if vaa.name
+                td= vaa.name
+              if vaa.userEmail
+                td= vaa.userEmail
+              if vaa.campus
+                td= vaa.campus vaa.building Floor: vaa.floor Room: vaa.room
+              else
+                td= vaa.location
+              if vaa.details
+                td= vaa.details
+              if vaa.type
+                td= vaa.type
