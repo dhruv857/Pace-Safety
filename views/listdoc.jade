@@ -26,9 +26,9 @@ div
 
               if vaa.campus
 
-                td= vaa.campus
+                td= | vaa.campus
                     | vaa.building
-                    |"Floor:" vaa.floor
+                    |"Floor:" + vaa.floor
                     |"Room:" + vaa.room
               else
                 td= vaa.location
