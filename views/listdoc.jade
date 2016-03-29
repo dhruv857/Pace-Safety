@@ -25,7 +25,7 @@ html(lang="en")
               tbody
                   each val in document
                     tr
-                      td= a(href="detailed/:"+ val._id)
+                      td a(href="detailed/:"+val._id) 
 
                       each vaa in val.report
                         if vaa.name
