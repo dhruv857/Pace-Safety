@@ -1,0 +1,60 @@
+doctype html
+html(lang="en")
+  head
+    title= "Detailed Report"
+    link(href='/style.css',rel='stylesheet',type='text/css')
+  body
+    
+
+
+
+        h1(align='center') Reports
+
+        div
+          table
+              thead
+                  tr 
+                      th Report ID
+                      th Name
+                      th EmailID
+                      th Location
+                      th Details
+                      th Date
+                      th Platform
+                      th Status
+
+              tbody
+                  
+                    tr
+                      td 
+                        a(href="detailed/:"+document._id)  #{document._id}
+                      if document.report
+                      -var replist = document.report
+                      if replist.metadata
+                        - var vmd = replist.metadata
+                          if vmd.type
+                           -var ttype = vmd.type
+                           
+                      if replist.data
+                        - var vaa = replist.data
+                        if vaa.name
+                          td= vaa.name
+                        
+                        if vaa.userEmail
+                          td= vaa.userEmail
+
+                        if vaa.campus
+                          - var campuslocal = vaa.campus + " "+ vaa.building +" "+  "Floor:" + vaa.floor +" "+  "Room:" + vaa.room
+                          td= campuslocal
+                        else
+                          td= vaa.location
+                        
+                        if vaa.details
+                          td= vaa.details
+                        
+                        if vaa.incident_date
+                          td= vaa.incident_date
+                        
+                        
+                          td= ttype
+                      td= document.type
