@@ -18,6 +18,5 @@ div
           tr
             td= val._id
 
-            for vaa in val.report
-              for meta in vaa.metadata
-                td= #{meta.type}
+            each vaa in val.report
+              td = val.meta
