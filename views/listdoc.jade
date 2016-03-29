@@ -29,7 +29,7 @@ html(lang="en")
 
                       each vaa in val.report
                         if vaa.name
-                          td= a(href="detailed/#{val._id}") vaa.name
+                          td= a(href="detailed/:"+val._id) vaa.name
                         
                         if vaa.userEmail
                           td= vaa.userEmail
