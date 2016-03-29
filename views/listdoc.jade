@@ -28,9 +28,13 @@ html(lang="en")
                       td 
                         a(href="detailed/:"+val._id)  #{val._id}
 
-                      each vaa in val.report
-                        if vaa.type
-                          -var ttype = vaa.type
+                      if report.metadata
+                        - var vmd = report.metadata
+                          if vmd.type
+                           -var ttype = vaa.type
+                           
+                      if report.data
+                        - var vaa = report.data
                         if vaa.name
                           td= vaa.name
                         
