@@ -29,6 +29,8 @@ html(lang="en")
                         a(href="detailed/:"+val._id)  #{val._id}
 
                       each vaa in val.report
+                        if vaa.type
+                          -var ttype = vaa.type
                         if vaa.name
                           td= vaa.name
                         
@@ -47,5 +49,5 @@ html(lang="en")
                         if vaa.incident_date
                           td= vaa.incident_date
                         
-                        if vaa.type
-                          td= vaa.type
+                        
+                          td= ttype
