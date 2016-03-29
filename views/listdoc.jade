@@ -27,14 +27,15 @@ html(lang="en")
                     tr
                       td 
                         a(href="detailed/:"+val._id)  #{val._id}
-
-                      if val.metadata
-                        - var vmd = val.metadata
+                      if val.report
+                      -var replist = val.report
+                      if replist.metadata
+                        - var vmd = replist.metadata
                           if vmd.type
                            -var ttype = vaa.type
                            
-                      if val.data
-                        - var vaa = val.data
+                      if replist.data
+                        - var vaa = replist.data
                         if vaa.name
                           td= vaa.name
                         
