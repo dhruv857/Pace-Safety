@@ -19,5 +19,5 @@ div
             td= val._id
 
             each vaa in val.report
-              each mta in vaa
-                td= mta.type
+              if vaa==metadata:
+                td= vaa.type
