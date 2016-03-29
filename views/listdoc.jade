@@ -8,10 +8,12 @@ div
   table
     thead
         tr: th Report ID
-            th platform
             th Name
             th EmailID
-            th Date of Incident
+            th Location
+            th Details
+            th Date
+            th Type
 
       tbody
         each val in document
@@ -31,5 +33,7 @@ div
                 td= vaa.location
               if vaa.details
                 td= vaa.details
+              if vaa.incident_date
+                td= vaa.incident_date
               if vaa.type
                 td= vaa.type
