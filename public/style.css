@@ -15,6 +15,10 @@ table th {
 table td {
   display: block;
 }
+td a {
+  color: #fff;
+  text-decoration: underline;
+}
 table td:first-child {
   padding-top: .5em;
 }
