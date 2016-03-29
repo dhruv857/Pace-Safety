@@ -12,35 +12,39 @@ html(lang="en")
 
         div
           table
-            thead
-                tr 
-                    th Report ID
-                    th Name
-                    th EmailID
-                    th Location
-                    th Details
-                    th Date
-                    th Type
+              thead
+                  tr 
+                      th Report ID
+                      th Name
+                      th EmailID
+                      th Location
+                      th Details
+                      th Date
+                      th Type
 
-            tbody
-                each val in document
-                  tr
-                    td= val._id
+              tbody
+                  each val in document
+                    tr
+                      td= val._id
 
-                    each vaa in val.report
-                      if vaa.name
-                        td= vaa.name
-                      if vaa.userEmail
-                        td= vaa.userEmail
+                      each vaa in val.report
+                        if vaa.name
+                          td= a(href="detailed/#{val._id}") vaa.name
+                        
+                        if vaa.userEmail
+                          td= vaa.userEmail
 
-                      if vaa.campus
-                        - var campuslocal = vaa.campus + " "+ vaa.building +" "+  "Floor:" + vaa.floor +" "+  "Room:" + vaa.room
-                        td= campuslocal
-                      else
-                        td= vaa.location
-                      if vaa.details
-                        td= vaa.details
-                      if vaa.incident_date
-                        td= vaa.incident_date
-                      if vaa.type
-                        td= vaa.type
+                        if vaa.campus
+                          - var campuslocal = vaa.campus + " "+ vaa.building +" "+  "Floor:" + vaa.floor +" "+  "Room:" + vaa.room
+                          td= campuslocal
+                        else
+                          td= vaa.location
+                        
+                        if vaa.details
+                          td= vaa.details
+                        
+                        if vaa.incident_date
+                          td= vaa.incident_date
+                        
+                        if vaa.type
+                          td= vaa.type
