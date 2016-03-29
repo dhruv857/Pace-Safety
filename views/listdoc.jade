@@ -19,4 +19,5 @@ div
             td= val._id
 
             each vaa in val.report
-              td = #{val.meta}
+              each mta in vaa.metadata
+                td= mta.type
