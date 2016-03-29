@@ -25,12 +25,11 @@ html(lang="en")
               tbody
                   each val in document
                     tr
-                      - var idr = val._id
-                      td= val._id
+                      td= a(href="detailed/:" + val._id) #{val._id}
 
                       each vaa in val.report
                         if vaa.name
-                          td a(href="detailed/:"+ idr)
+                          td= vaa.name
                         
                         if vaa.userEmail
                           td= vaa.userEmail
