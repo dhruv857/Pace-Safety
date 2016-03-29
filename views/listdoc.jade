@@ -20,7 +20,8 @@ html(lang="en")
                       th Location
                       th Details
                       th Date
-                      th Type
+                      th Platform
+                      th Status
 
               tbody
                   each val in document
@@ -56,3 +57,4 @@ html(lang="en")
                         
                         
                           td= ttype
+                      td= val.type
