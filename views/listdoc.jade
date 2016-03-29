@@ -25,7 +25,8 @@ html(lang="en")
               tbody
                   each val in document
                     tr
-                      td= a(href="detailed/:" + val._id) val._id
+                      - var linking =  a(href="detailed/:" + val._id) +  val._id
+                      td= linking
 
                       each vaa in val.report
                         if vaa.name
