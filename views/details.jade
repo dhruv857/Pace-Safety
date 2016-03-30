@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
   head
-    title= "Detailed Report"
+    title= "Report List"
     link(href='/style.css',rel='stylesheet',type='text/css')
   body
     
@@ -24,12 +24,12 @@ html(lang="en")
                       th Status
 
               tbody
-                  
+                  each val in document
                     tr
                       td 
-                        a(href="detailed/:"+document._id)  #{document._id}
-                      if document.report
-                      -var replist = document.report
+                        a(href="detailed/:"+val._id)  #{val._id}
+                      if val.report
+                      -var replist = val.report
                       if replist.metadata
                         - var vmd = replist.metadata
                           if vmd.type
@@ -57,4 +57,4 @@ html(lang="en")
                         
                         
                           td= ttype
-                      td= document.type
+                      td= val.type
