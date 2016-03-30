@@ -18,8 +18,7 @@ html(lang="en")
                   each val in document
                     tr
                       td Report ID
-                      td 
-                        a(href="detailed/:"+val._id)  #{val._id}
+                      td= val._id
                     if val.report
                     -var replist = val.report
                     if replist.metadata
@@ -34,7 +33,7 @@ html(lang="en")
                       if vaa.name
                         td= vaa.name
                     tr
-                      td
+                      td Email Id
                       if vaa.userEmail
                         td= vaa.userEmail
 
@@ -57,10 +56,7 @@ html(lang="en")
                       td Time Of Incident
                       if vaa.incident_time
                         td= vaa.incident_time
-                    tr
-                      td Date Of Incident
-                      if vaa.incident_date
-                        td= vaa.incident_date 
+                    
                       
                     tr
                       td Details
