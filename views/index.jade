@@ -1,0 +1,20 @@
+html
+	head
+		title= title
+		link(href='/style.css',rel='stylesheet',type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900,100,300',rel='stylesheet',type='text/css')
+
+	body
+		div(class="alert")
+			h1 Pace Safety Alert
+			h3 Alert Sent By:
+			h2 #{name}
+			h3 Urgency:
+			if alertType == "nervous"
+				h2 #{name} is feeling Nervous
+			else
+				h2 #{name} is in trouble!
+			h3 The alert came from this location: 
+			h2 #{locationAddress}
+			h2 
+				a(href="http://maps.google.com") View Location In Google Maps
