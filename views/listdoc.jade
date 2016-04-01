@@ -27,7 +27,7 @@ html(lang="en")
                   each val in document
                     tr
                       td 
-                        a(href="detailed/:"+val._id)  #{val._id}
+                        a(href="detailed/"+val._id)  #{val._id}
                       if val.report
                       -var replist = val.report
                       if replist.metadata
